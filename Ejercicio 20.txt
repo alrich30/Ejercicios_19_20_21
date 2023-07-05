@@ -1,0 +1,32 @@
+La arquitectura limpia (Clean Architecture) es un enfoque de diseño de software propuesto por Robert C. Martin,
+también conocido como "Uncle Bob". A continuación, se presentan las características principales de la arquitectura limpia en Java:
+
+1. Independencia de frameworks y bibliotecas externas: La arquitectura limpia busca mantener el
+código base del negocio completamente independiente de cualquier biblioteca o framework externo.
+Esto se logra al definir límites claros entre las capas y asegurarse de que las capas internas no dependan de las capas externas.
+
+2. Separación en capas: La arquitectura limpia se organiza en capas concéntricas,
+donde cada capa tiene una responsabilidad específica y depende únicamente de las capas internas.
+Las capas típicas incluyen la capa de dominio o negocio (core), la capa de aplicación, la capa de interfaces de usuario y la capa de infraestructura.
+
+3. Principio de inversión de dependencias (Dependency Inversion Principle, DIP):
+La arquitectura limpia aplica el principio de inversión de dependencias para reducir las dependencias directas entre las capas.
+Esto se logra definiendo interfaces en las capas internas y permitiendo
+ que las capas externas dependan de esas interfaces en lugar de implementaciones concretas.
+
+4. Separación de preocupaciones: La arquitectura limpia busca separar las preocupaciones en diferentes componentes del sistema.
+Por ejemplo, la lógica de negocio se coloca en la capa de dominio,
+mientras que las responsabilidades de la interfaz de usuario y la infraestructura se colocan en capas separadas.
+Esto mejora la mantenibilidad y facilita las pruebas unitarias.
+
+5. Testabilidad: La arquitectura limpia fomenta la escritura de pruebas unitarias al permitir que las capas internas, como la capa de dominio,
+se prueben de manera aislada sin depender de la infraestructura externa. Esto se logra utilizando interfaces y dependencias inyectables que se
+pueden reemplazar fácilmente durante las pruebas.
+
+6. Independencia de la interfaz de usuario: La arquitectura limpia no está acoplada
+a un tipo de interfaz de usuario específico, como una interfaz de línea de comandos o una interfaz web. En cambio,
+la capa de interfaz de usuario actúa como un adaptador para la interacción con el
+mundo exterior, mientras que la lógica principal del negocio se mantiene en la capa de dominio.
+
+7. Enfoque en el modelo de dominio: La arquitectura limpia destaca la importancia del modelo de dominio y busca mantenerlo puro y sin contaminación
+de aspectos técnicos o externos. La lógica de negocio se encuentra en el centro de la arquitectura y se mantiene independiente de las preocupaciones de la infraestructura.
